@@ -636,3 +636,91 @@
 [2025-01-18T19:38:53.608+0000] {logging_mixin.py:190} INFO - [2025-01-18T19:38:53.590+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-01-18T19:38:53.875+0000] {logging_mixin.py:190} INFO - [2025-01-18T19:38:53.874+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
 [2025-01-18T19:38:53.965+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 1.254 seconds
+[2025-01-18T21:03:23.421+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:03:23.436+0000] {processor.py:186} INFO - Started process (PID=166) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:03:23.437+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:03:23.441+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:23.440+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:03:26.021+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:03:26.268+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.267+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:data_ingestion
+[2025-01-18T21:03:26.279+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.278+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:data_ingestion
+[2025-01-18T21:03:26.286+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.286+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:data_ingestion
+[2025-01-18T21:03:26.293+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.293+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:data_ingestion
+[2025-01-18T21:03:26.299+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.299+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:data_ingestion
+[2025-01-18T21:03:26.306+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.305+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:data_ingestion
+[2025-01-18T21:03:26.314+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.313+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:data_ingestion
+[2025-01-18T21:03:26.314+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.314+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:03:26.331+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.331+0000] {dag.py:3262} INFO - Creating ORM DAG for data_ingestion
+[2025-01-18T21:03:26.342+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:26.342+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:03:26.360+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 2.944 seconds
+[2025-01-18T21:03:56.659+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:03:56.676+0000] {processor.py:186} INFO - Started process (PID=172) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:03:56.679+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:03:56.685+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:56.685+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:03:57.420+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:03:57.446+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:57.445+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:03:57.469+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:03:57.469+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:03:57.494+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 0.842 seconds
+[2025-01-18T21:04:27.841+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:04:27.848+0000] {processor.py:186} INFO - Started process (PID=178) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:04:27.849+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:04:27.851+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:04:27.851+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:04:28.570+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:04:28.600+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:04:28.600+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:04:28.622+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:04:28.622+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:04:28.639+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 0.801 seconds
+[2025-01-18T21:04:58.887+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:04:58.898+0000] {processor.py:186} INFO - Started process (PID=184) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:04:58.899+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:04:58.902+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:04:58.902+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:04:59.455+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:04:59.484+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:04:59.484+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:04:59.511+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:04:59.511+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:04:59.534+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 0.649 seconds
+[2025-01-18T21:05:29.589+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:05:29.596+0000] {processor.py:186} INFO - Started process (PID=190) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:05:29.597+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:05:29.600+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:05:29.599+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:05:30.101+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:05:30.122+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:05:30.122+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:05:30.144+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:05:30.144+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:05:30.161+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 0.575 seconds
+[2025-01-18T21:06:00.427+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:06:00.434+0000] {processor.py:186} INFO - Started process (PID=196) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:06:00.435+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:06:00.439+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:06:00.439+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:06:01.133+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:06:01.167+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:06:01.167+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:06:01.195+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:06:01.195+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:06:01.218+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 0.795 seconds
+[2025-01-18T21:06:31.445+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:06:31.453+0000] {processor.py:186} INFO - Started process (PID=202) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:06:31.454+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:06:31.459+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:06:31.458+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:06:32.011+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:06:32.040+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:06:32.040+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:06:32.066+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:06:32.066+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:06:32.087+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 0.645 seconds
+[2025-01-18T21:07:02.600+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:07:02.612+0000] {processor.py:186} INFO - Started process (PID=208) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:07:02.613+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:07:02.617+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:07:02.616+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:07:03.430+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:07:03.458+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:07:03.458+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:07:03.496+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:07:03.496+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:07:03.519+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 0.924 seconds
+[2025-01-18T21:07:33.936+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:07:33.964+0000] {processor.py:186} INFO - Started process (PID=214) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:07:33.977+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:07:33.980+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:07:33.979+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:07:34.382+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:07:34.408+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:07:34.408+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:07:34.438+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:07:34.438+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:07:34.463+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 0.531 seconds
+[2025-01-18T21:08:04.726+0000] {logging_mixin.py:190} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/settings.py:470 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T21:08:04.733+0000] {processor.py:186} INFO - Started process (PID=220) to work on /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:08:04.734+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/s3_ingest_dag.py for tasks to queue
+[2025-01-18T21:08:04.738+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:08:04.738+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:08:05.139+0000] {processor.py:925} INFO - DAG(s) 'data_ingestion' retrieved from /opt/airflow/dags/s3_ingest_dag.py
+[2025-01-18T21:08:05.164+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:08:05.164+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-18T21:08:05.190+0000] {logging_mixin.py:190} INFO - [2025-01-18T21:08:05.190+0000] {dag.py:4180} INFO - Setting next_dagrun for data_ingestion to 2025-01-01 00:00:00+00:00, run_after=2025-02-01 00:00:00+00:00
+[2025-01-18T21:08:05.209+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/s3_ingest_dag.py took 0.486 seconds
