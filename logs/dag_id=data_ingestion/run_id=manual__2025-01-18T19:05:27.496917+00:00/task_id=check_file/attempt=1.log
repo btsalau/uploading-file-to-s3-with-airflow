@@ -1,0 +1,23 @@
+[2025-01-18T19:06:16.358+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-18T19:06:16.374+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion.check_file manual__2025-01-18T19:05:27.496917+00:00 [queued]>
+[2025-01-18T19:06:16.383+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion.check_file manual__2025-01-18T19:05:27.496917+00:00 [queued]>
+[2025-01-18T19:06:16.383+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-18T19:06:16.395+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): check_file> on 2025-01-18 19:05:27.496917+00:00
+[2025-01-18T19:06:16.404+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=204) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-18T19:06:16.405+0000] {standard_task_runner.py:72} INFO - Started process 206 to run task
+[2025-01-18T19:06:16.404+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion', 'check_file', 'manual__2025-01-18T19:05:27.496917+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/s3_ingest_dag.py', '--cfg-path', '/tmp/tmpg405omc9']
+[2025-01-18T19:06:16.407+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask check_file
+[2025-01-18T19:06:16.425+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T19:06:16.465+0000] {task_command.py:467} INFO - Running <TaskInstance: data_ingestion.check_file manual__2025-01-18T19:05:27.496917+00:00 [running]> on host 441b7a80a838
+[2025-01-18T19:06:16.554+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_ingestion' AIRFLOW_CTX_TASK_ID='check_file' AIRFLOW_CTX_EXECUTION_DATE='2025-01-18T19:05:27.496917+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-18T19:05:27.496917+00:00'
+[2025-01-18T19:06:16.555+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-18T19:06:16.568+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-18T19:06:16.569+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'ls /opt/***/downloads']
+[2025-01-18T19:06:16.579+0000] {subprocess.py:99} INFO - Output:
+[2025-01-18T19:06:16.586+0000] {subprocess.py:106} INFO - output.csv
+[2025-01-18T19:06:16.586+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-18T19:06:16.608+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-18T19:06:16.608+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=data_ingestion, task_id=check_file, run_id=manual__2025-01-18T19:05:27.496917+00:00, execution_date=20250118T190527, start_date=20250118T190616, end_date=20250118T190616
+[2025-01-18T19:06:16.630+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-18T19:06:16.654+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-18T19:06:16.656+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

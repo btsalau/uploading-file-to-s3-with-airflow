@@ -1,0 +1,90 @@
+version: '3'
+services:
+  airflow-init:
+    build: .
+    user: "50000:0"
+    entrypoint: /bin/bash
+    depends_on:
+      - postgres
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__FERNET_KEY='Dc5q-ECu64Hsgaz_hHDk7wf-32RiKE588w9oUtNLI-8='
+      - AIRFLOW_PROJ_DIR=.
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./config:/opt/airflow/config
+      - ./plugins:/opt/airflow/plugins
+      - ./logs:/opt/airflow/logs
+    command: -c "airflow db init && airflow users create --username airflow --password airflow --firstname firstname --lastname lastname --role Admin --email airflow@example.com"
+
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "airflow" ]
+      interval: 5s
+      retries: 5
+
+  app-postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ny_taxi
+    volumes:
+      - app-postgres-db-volume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  webserver:
+    build: .
+    depends_on:
+      - postgres
+    user: "50000:0"
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__FERNET_KEY='Dc5q-ECu64Hsgaz_hHDk7wf-32RiKE588w9oUtNLI-8='
+      - AIRFLOW_PROJ_DIR=.
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./config:/opt/airflow/config
+      - ./plugins:/opt/airflow/plugins
+      - ./logs:/opt/airflow/logs
+      - ~/.aws:/home/airflow/.aws:ro # Mount AWS credentials directory as read-only
+    ports:
+      - "8080:8080"
+    command: webserver
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:8080/health" ]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  scheduler:
+    build: .
+    depends_on:
+      - webserver
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__FERNET_KEY='Dc5q-ECu64Hsgaz_hHDk7wf-32RiKE588w9oUtNLI-8='
+      - AIRFLOW_PROJ_DIR=.
+    user: "50000:0"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./config:/opt/airflow/config
+      - ./plugins:/opt/airflow/plugins
+      - ./logs:/opt/airflow/logs
+      - ~/.aws:/home/airflow/.aws:ro # Mount AWS credentials directory as read-only
+    command: scheduler
+
+volumes:
+  app-postgres-db-volume:
+  postgres-db-volume:

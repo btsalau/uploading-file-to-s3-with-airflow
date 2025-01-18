@@ -1,0 +1,95 @@
+[2025-01-18T19:06:19.358+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-18T19:06:19.376+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion.process_data manual__2025-01-18T19:05:27.496917+00:00 [queued]>
+[2025-01-18T19:06:19.386+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion.process_data manual__2025-01-18T19:05:27.496917+00:00 [queued]>
+[2025-01-18T19:06:19.386+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-18T19:06:19.405+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): process_data> on 2025-01-18 19:05:27.496917+00:00
+[2025-01-18T19:06:19.416+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=213) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-01-18T19:06:19.418+0000] {standard_task_runner.py:72} INFO - Started process 215 to run task
+[2025-01-18T19:06:19.416+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion', 'process_data', 'manual__2025-01-18T19:05:27.496917+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/s3_ingest_dag.py', '--cfg-path', '/tmp/tmpjfjy2tfg']
+[2025-01-18T19:06:19.420+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask process_data
+[2025-01-18T19:06:19.439+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:209 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-01-18T19:06:19.479+0000] {task_command.py:467} INFO - Running <TaskInstance: data_ingestion.process_data manual__2025-01-18T19:05:27.496917+00:00 [running]> on host 441b7a80a838
+[2025-01-18T19:06:19.567+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_ingestion' AIRFLOW_CTX_TASK_ID='process_data' AIRFLOW_CTX_EXECUTION_DATE='2025-01-18T19:05:27.496917+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-18T19:05:27.496917+00:00'
+[2025-01-18T19:06:19.569+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-18T19:06:40.597+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.542 seconds
+[2025-01-18T19:06:50.271+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.674 seconds
+[2025-01-18T19:06:59.343+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.072 seconds
+[2025-01-18T19:07:08.897+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.553 seconds
+[2025-01-18T19:07:18.089+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.191 seconds
+[2025-01-18T19:07:26.844+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.755 seconds
+[2025-01-18T19:07:36.139+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.294 seconds
+[2025-01-18T19:07:45.262+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.121 seconds
+[2025-01-18T19:07:55.175+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.913 seconds
+[2025-01-18T19:08:04.705+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.529 seconds
+[2025-01-18T19:08:14.206+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.500 seconds
+[2025-01-18T19:08:24.065+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.858 seconds
+[2025-01-18T19:08:33.209+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.144 seconds
+[2025-01-18T19:08:42.272+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.062 seconds
+[2025-01-18T19:08:51.118+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.845 seconds
+[2025-01-18T19:08:59.813+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.694 seconds
+[2025-01-18T19:09:08.603+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.790 seconds
+[2025-01-18T19:09:17.419+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.816 seconds
+[2025-01-18T19:09:26.203+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.783 seconds
+[2025-01-18T19:09:35.400+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.197 seconds
+[2025-01-18T19:09:44.653+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.252 seconds
+[2025-01-18T19:09:53.792+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.139 seconds
+[2025-01-18T19:10:02.652+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.859 seconds
+[2025-01-18T19:10:11.612+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.959 seconds
+[2025-01-18T19:10:20.280+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.667 seconds
+[2025-01-18T19:10:29.139+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.859 seconds
+[2025-01-18T19:10:38.091+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.951 seconds
+[2025-01-18T19:10:47.957+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.866 seconds
+[2025-01-18T19:10:57.331+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.373 seconds
+[2025-01-18T19:11:07.170+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.839 seconds
+[2025-01-18T19:11:18.064+0000] {logging_mixin.py:190} INFO - inserted another chunk...10.893 seconds
+[2025-01-18T19:11:29.816+0000] {logging_mixin.py:190} INFO - inserted another chunk...11.751 seconds
+[2025-01-18T19:11:39.647+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.830 seconds
+[2025-01-18T19:11:49.354+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.706 seconds
+[2025-01-18T19:11:58.546+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.191 seconds
+[2025-01-18T19:12:07.230+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.684 seconds
+[2025-01-18T19:12:17.163+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.932 seconds
+[2025-01-18T19:12:30.091+0000] {logging_mixin.py:190} INFO - inserted another chunk...12.928 seconds
+[2025-01-18T19:12:40.222+0000] {logging_mixin.py:190} INFO - inserted another chunk...10.130 seconds
+[2025-01-18T19:12:50.163+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.940 seconds
+[2025-01-18T19:13:02.970+0000] {logging_mixin.py:190} INFO - inserted another chunk...12.807 seconds
+[2025-01-18T19:13:12.240+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.269 seconds
+[2025-01-18T19:13:22.107+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.866 seconds
+[2025-01-18T19:13:34.172+0000] {logging_mixin.py:190} INFO - inserted another chunk...12.063 seconds
+[2025-01-18T19:13:46.134+0000] {logging_mixin.py:190} INFO - inserted another chunk...11.957 seconds
+[2025-01-18T19:13:55.534+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.400 seconds
+[2025-01-18T19:14:05.612+0000] {logging_mixin.py:190} INFO - inserted another chunk...10.077 seconds
+[2025-01-18T19:14:15.825+0000] {logging_mixin.py:190} INFO - inserted another chunk...10.211 seconds
+[2025-01-18T19:14:24.719+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.892 seconds
+[2025-01-18T19:14:33.797+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.078 seconds
+[2025-01-18T19:14:42.911+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.113 seconds
+[2025-01-18T19:14:52.785+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.873 seconds
+[2025-01-18T19:15:02.375+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.590 seconds
+[2025-01-18T19:15:12.197+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.821 seconds
+[2025-01-18T19:15:21.249+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.051 seconds
+[2025-01-18T19:15:30.120+0000] {logging_mixin.py:190} INFO - inserted another chunk...8.870 seconds
+[2025-01-18T19:15:39.396+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.275 seconds
+[2025-01-18T19:15:48.798+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.402 seconds
+[2025-01-18T19:15:57.899+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.100 seconds
+[2025-01-18T19:16:07.611+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.711 seconds
+[2025-01-18T19:16:17.440+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.828 seconds
+[2025-01-18T19:16:26.904+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.463 seconds
+[2025-01-18T19:16:36.037+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.132 seconds
+[2025-01-18T19:16:45.406+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.368 seconds
+[2025-01-18T19:16:54.886+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.479 seconds
+[2025-01-18T19:17:06.058+0000] {logging_mixin.py:190} INFO - inserted another chunk...11.172 seconds
+[2025-01-18T19:17:15.413+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.355 seconds
+[2025-01-18T19:17:24.980+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.566 seconds
+[2025-01-18T19:17:34.029+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.049 seconds
+[2025-01-18T19:17:43.385+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.355 seconds
+[2025-01-18T19:17:52.823+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.437 seconds
+[2025-01-18T19:18:02.320+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.496 seconds
+[2025-01-18T19:18:11.795+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.474 seconds
+[2025-01-18T19:18:20.835+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.040 seconds
+[2025-01-18T19:18:29.981+0000] {logging_mixin.py:190} INFO - inserted another chunk...9.145 seconds
+[2025-01-18T19:18:36.649+0000] {logging_mixin.py:190} INFO - inserted another chunk...6.667 seconds
+[2025-01-18T19:18:36.652+0000] {python.py:240} INFO - Done. Returned value was: Iteration complete!
+[2025-01-18T19:18:36.681+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-18T19:18:36.682+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=data_ingestion, task_id=process_data, run_id=manual__2025-01-18T19:05:27.496917+00:00, execution_date=20250118T190527, start_date=20250118T190619, end_date=20250118T191836
+[2025-01-18T19:18:36.735+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-18T19:18:36.775+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-18T19:18:36.778+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
